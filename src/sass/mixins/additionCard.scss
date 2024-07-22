@@ -1,0 +1,108 @@
+.addition{
+  width: 305px;
+  height: 463px;
+
+  .swiper-container-addition{
+    overflow: hidden;
+  }
+  .swiper-wrapper{
+    img{
+      margin-top: -10px;
+    }
+  }
+  .swiper-pagination-addition{
+    display:flex;
+    justify-content: center;
+    width: 52px;
+    gap: 3px;
+    margin: 30px 115px;
+  }
+
+  .swiper-pagination-bullet{
+    width: 8px;
+    height: 8px;
+    margin: 0 !important;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--lite-gray);
+    cursor: pointer;
+    outline: none;
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active{
+    background: var(--text-lite-color);
+    cursor: default;
+  }
+
+  &__header__btn{
+    height:28px;
+    border-radius: 5px;
+    margin: 10px 0 0 12px;
+    position: relative;
+    z-index: 10;
+    p{
+      @include btn-card;
+      color:#fff;
+      text-align: center;
+      padding: 4px 15px;
+    }
+
+    .swiper-container-addition {
+      width: 265px;
+    }
+  }
+  .btn{
+    &-new{
+      background-color: var(--purple);
+      width: 97px;
+    }
+
+    &-sale{
+      background-color: var(--mint);
+      width: 79px;
+    }
+
+    &-hit{
+      background-color: var(--pink);
+      width: 123px;
+    }
+  }
+
+  &__content{
+    margin: 180px 15px 0 16px;
+    height: 155px;
+
+    &__subtitle{
+      @include text-breadcrumbs;
+    }
+
+    &__title{
+      @include h-cards;
+      color: var(--base-color);
+      margin-top: 9px;
+      margin-bottom: 4px;
+    }
+
+    &__text{
+      margin-bottom: 15px;
+      width: 236px;
+      @include font(var(--font-roboto), 16px, 140%, 400);
+      color: var(--base-color);
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;  
+      overflow: hidden;
+    }
+
+    &__btn{
+      width: 273px;
+      margin: 23px 0 17px 16px;
+    }
+
+  }
+}
+@include laptop{
+  .swiper-pagination-addition {
+    margin: 30px 108px !important;
+  }
+}

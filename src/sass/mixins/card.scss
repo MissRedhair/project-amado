@@ -1,0 +1,77 @@
+.slide{
+  display: grid;
+  grid-template-columns: 40% 60%;
+  height: 660px;
+}
+
+.card {
+  &__title {
+    @include title; 
+    color: var(--base-color);
+    margin-top: 78px;
+    margin-bottom: 31px;
+  }
+
+  &__subtitle{
+    @include subtitle-h5; 
+    color: var(--base-color);
+    margin-bottom: 22px;
+  }
+
+  &__text{
+    @include text; 
+    color: var(--base-color);
+    line-height: 26px;
+    width: 500px;
+    margin-bottom: 20px;
+  }
+
+  &__action{
+    display: flex;
+    width: 316px;
+    justify-content: space-between;
+    align-items: center;
+
+    &__btn{
+      width: 196px;
+      margin-top: 0;
+    }
+
+    &__link{
+      border-bottom: 3px dotted var(--primary-color);
+      padding-top: 8px;
+      padding-bottom: 2px;
+      @include btn;
+      text-align: center;
+      color: var(--primary-color);
+
+      &:hover{
+        color: var(--cold-mint);
+        border-color: var(--cold-mint);
+        @include ts(0.3s);
+      }
+    }
+  }
+
+  &__image img{
+    margin-top: 60px;
+    margin-left: 5px;
+  }
+}
+
+@include laptop {
+  .card__title{
+    font-size: 40px;
+    margin-top: 66px;
+    margin-bottom: 19px;
+  }
+  .card__text{
+    margin-bottom: 26px;
+  }
+
+  .card__image img{
+    transform: scale(0.65);
+    margin-top: 8px;
+    margin-left: -71px;
+  }
+}

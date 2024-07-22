@@ -1,0 +1,9 @@
+.component p{
+  @include font(var(--font-roboto), 16px, 100%, 400);
+  color: var(--primary-color);
+  text-align: center;
+  margin-top: 12px;
+}
+.component img{
+  margin: 0 19px;
+}

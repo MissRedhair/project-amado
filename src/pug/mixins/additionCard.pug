@@ -1,0 +1,15 @@
+mixin additionCard(btn, className, classSwiper, subtitle, title, text, src )
+  .addition.swiper-slide 
+    .addition__header__btn(class=className): p=btn 
+      .swiper-container-addition(class=classSwiper) 
+        .swiper-wrapper
+          block
+
+          include ~@mixins/imgAddition
+        .swiper-pagination-addition
+    
+    .addition__content
+      p.addition__content__subtitle=subtitle 
+      h3.addition__content__title=title
+      p.addition__content__text=text
+    button.addition__content__btn.btn-empty Подробнее

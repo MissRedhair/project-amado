@@ -1,0 +1,105 @@
+include ~@mixins/img-product
+include ~@mixins/component
+
+section.products 
+  h2.products__title Продукция Кардиола
+  .products-block 
+    .product 
+        .product__header 
+          .product__header__btn.btn-new: p Новинка
+          svg.like-icon(width="22" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"): path(d="M10.7731 18.2961C10.5592 18.4835 10.2847 18.5866 9.99996 18.5866C9.71538 18.5866 9.44072 18.4835 9.22695 18.2964C8.41716 17.5882 7.63697 16.9233 6.94849 16.3367L6.9482 16.3365C4.9337 14.6196 3.194 13.137 1.98342 11.6762C0.630108 10.0433 -8.2016e-05 8.49503 -8.2016e-05 6.80358C-8.2016e-05 5.1602 0.563274 3.64409 1.58638 2.53431C2.62169 1.41141 4.04245 0.792969 5.58695 0.792969C6.74143 0.792969 7.79872 1.15796 8.72935 1.87772C9.19917 2.24103 9.62474 2.68568 9.99996 3.20433C10.375 2.68568 10.8007 2.24103 11.2704 1.87772C12.201 1.15796 13.2583 0.792969 14.4128 0.792969C15.9575 0.792969 17.3781 1.41141 18.4134 2.53431C19.4365 3.64409 20 5.1602 20 6.80358C20 8.49503 19.3697 10.0433 18.0163 11.6763C16.8057 13.1371 15.0657 14.6199 13.0508 16.337L13.0473 16.3401C12.36 16.9257 11.5811 17.5896 10.7731 18.2961Z")
+        .product__slider
+          .swiper-container-product1 
+            .swiper-wrapper
+              +img-product('images/cardiola.png', 'Cardiola')
+              +img-product('images/cardiola.png', 'Cardiola')
+              +img-product('images/cardiola.png', 'Cardiola')
+              +img-product('images/cardiola.png', 'Cardiola')
+              +img-product('images/cardiola.png', 'Cardiola')
+            .swiper-pagination-product  
+         
+        .product__content
+          h3.product__content__title  Кардиола
+          .product__content__info 
+            p.count 30 таблеток
+            p.dose 400 mg
+          p.product__content__text добавка для здоровья сердца и активной жизни, в составе которой преобладают натуральные экстракты лекарственных растений
+          .product__content__components
+            +component('images/components/berries.png', 'Боярышник')
+            +component('images/components/radiola.png', 'Родиола розовая')
+            +component('images/components/vitaminC.png', 'Витамин С')
+        button.product__btn.btn-empty Подробнее
+
+    .product 
+        .product__header 
+          .product__header__btn.btn-sale: p Акция
+          svg.like-icon(width="22" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"): path(d="M10.7731 18.2961C10.5592 18.4835 10.2847 18.5866 9.99996 18.5866C9.71538 18.5866 9.44072 18.4835 9.22695 18.2964C8.41716 17.5882 7.63697 16.9233 6.94849 16.3367L6.9482 16.3365C4.9337 14.6196 3.194 13.137 1.98342 11.6762C0.630108 10.0433 -8.2016e-05 8.49503 -8.2016e-05 6.80358C-8.2016e-05 5.1602 0.563274 3.64409 1.58638 2.53431C2.62169 1.41141 4.04245 0.792969 5.58695 0.792969C6.74143 0.792969 7.79872 1.15796 8.72935 1.87772C9.19917 2.24103 9.62474 2.68568 9.99996 3.20433C10.375 2.68568 10.8007 2.24103 11.2704 1.87772C12.201 1.15796 13.2583 0.792969 14.4128 0.792969C15.9575 0.792969 17.3781 1.41141 18.4134 2.53431C19.4365 3.64409 20 5.1602 20 6.80358C20 8.49503 19.3697 10.0433 18.0163 11.6763C16.8057 13.1371 15.0657 14.6199 13.0508 16.337L13.0473 16.3401C12.36 16.9257 11.5811 17.5896 10.7731 18.2961Z")
+        .product__slider
+           .swiper-container-product2 
+            .swiper-wrapper
+              +img-product('images/siropCardiola.png', 'sirop Cardiola')
+              +img-product('images/siropCardiola.png', 'sirop Cardiola')
+              +img-product('images/siropCardiola.png', 'sirop Cardiola')
+              +img-product('images/siropCardiola.png', 'sirop Cardiola')
+              +img-product('images/siropCardiola.png', 'sirop Cardiola')
+            .swiper-pagination-product  
+        .product__content
+          h3.product__content__title  Сироп Кардиола
+          .product__content__info 
+            p.count 150 мл сироп
+          p.product__content__text добавка для здоровья сердца и активной жизни, в составе которой преобладают натуральные экстракты лекарственных растений
+          .product__content__components
+            +component('images/components/berries.png', 'Боярышник')
+            +component('images/components/radiola.png', 'Родиола розовая')
+            +component('images/components/vitaminC.png', 'Витамин С')
+        button.product__btn.btn-empty Подробнее
+
+    .product 
+        .product__header 
+          .product__header__btn.btn-hit: p Топ продаж
+          svg.like-icon(width="22" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"): path(d="M10.7731 18.2961C10.5592 18.4835 10.2847 18.5866 9.99996 18.5866C9.71538 18.5866 9.44072 18.4835 9.22695 18.2964C8.41716 17.5882 7.63697 16.9233 6.94849 16.3367L6.9482 16.3365C4.9337 14.6196 3.194 13.137 1.98342 11.6762C0.630108 10.0433 -8.2016e-05 8.49503 -8.2016e-05 6.80358C-8.2016e-05 5.1602 0.563274 3.64409 1.58638 2.53431C2.62169 1.41141 4.04245 0.792969 5.58695 0.792969C6.74143 0.792969 7.79872 1.15796 8.72935 1.87772C9.19917 2.24103 9.62474 2.68568 9.99996 3.20433C10.375 2.68568 10.8007 2.24103 11.2704 1.87772C12.201 1.15796 13.2583 0.792969 14.4128 0.792969C15.9575 0.792969 17.3781 1.41141 18.4134 2.53431C19.4365 3.64409 20 5.1602 20 6.80358C20 8.49503 19.3697 10.0433 18.0163 11.6763C16.8057 13.1371 15.0657 14.6199 13.0508 16.337L13.0473 16.3401C12.36 16.9257 11.5811 17.5896 10.7731 18.2961Z")
+        .product__slider 
+         .swiper-container-product3 
+            .swiper-wrapper
+              +img-product('images/cardiolaOmega3.png', 'Cardiola Omega3')
+              +img-product('images/cardiolaOmega3.png', 'Cardiola Omega3')
+              +img-product('images/cardiolaOmega3.png', 'Cardiola Omega3')
+              +img-product('images/cardiolaOmega3.png', 'Cardiola Omega3')
+              +img-product('images/cardiolaOmega3.png', 'Cardiola Omega3')
+            .swiper-pagination-product  
+        .product__content
+          h3.product__content__title  Омега-3 Кардиола
+          .product__content__info 
+            p.count 30 капсул
+            p.dose 700 mg
+          p.product__content__text Омега-3 «60%» обеспечит организм достаточным количеством ПНЖК Омега-3 для нормального функционирования сердечно-сосудистых
+          .product__content__components  
+            +component('images/components/omega3.png', 'Омега 3')
+            +component('', '')
+            +component('', '')
+        button.product__btn.btn-empty Подробнее
+    div 
+    .product 
+        .product__header 
+          .product__header__btn: p 
+          svg.like-icon(width="22" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"): path(d="M10.7731 18.2961C10.5592 18.4835 10.2847 18.5866 9.99996 18.5866C9.71538 18.5866 9.44072 18.4835 9.22695 18.2964C8.41716 17.5882 7.63697 16.9233 6.94849 16.3367L6.9482 16.3365C4.9337 14.6196 3.194 13.137 1.98342 11.6762C0.630108 10.0433 -8.2016e-05 8.49503 -8.2016e-05 6.80358C-8.2016e-05 5.1602 0.563274 3.64409 1.58638 2.53431C2.62169 1.41141 4.04245 0.792969 5.58695 0.792969C6.74143 0.792969 7.79872 1.15796 8.72935 1.87772C9.19917 2.24103 9.62474 2.68568 9.99996 3.20433C10.375 2.68568 10.8007 2.24103 11.2704 1.87772C12.201 1.15796 13.2583 0.792969 14.4128 0.792969C15.9575 0.792969 17.3781 1.41141 18.4134 2.53431C19.4365 3.64409 20 5.1602 20 6.80358C20 8.49503 19.3697 10.0433 18.0163 11.6763C16.8057 13.1371 15.0657 14.6199 13.0508 16.337L13.0473 16.3401C12.36 16.9257 11.5811 17.5896 10.7731 18.2961Z")
+        .product__slider 
+          .swiper-container-product4  
+            .swiper-wrapper
+              +img-product('images/cardiolaOmega3.png', 'cardiola Omega3')
+              +img-product('images/cardiolaOmega3.png', 'cardiola Omega3')
+              +img-product('images/cardiolaOmega3.png', 'cardiola Omega3')
+              +img-product('images/cardiolaOmega3.png', 'cardiola Omega3')
+              +img-product('images/cardiolaOmega3.png', 'cardiola Omega3')
+            .swiper-pagination-product  
+        .product__content
+          h3.product__content__title  Омега-3 Кардиола
+          .product__content__info 
+            p.count 80 капсул
+            p.dose 700 mg
+          p.product__content__text Омега-3 «60%» обеспечит организм достаточным количеством ПНЖК Омега-3 для нормального функционирования сердечно-сосудистых
+          .product__content__components  
+            +component('images/components/omega3.png', 'Омега 3')
+            +component('', '')
+            +component('', '')
+        button.product__btn.btn-empty Подробнее

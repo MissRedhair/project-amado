@@ -1,0 +1,148 @@
+// =============================================================================
+// String Replace
+// =============================================================================
+
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}
+
+// =============================================================================
+// Media
+// =============================================================================
+
+// ниже 1920
+@mixin desktop {
+  @media screen and (max-width: 1920px) {
+    @content;
+  }
+}
+
+//ниже 1280
+@mixin laptop {
+  @media screen and (max-width: 1280px) {
+    @content;
+  }
+}
+// ниже 1024
+@mixin tablet {
+  @media screen and (max-width: 1023px) {
+    @content;
+  }
+}
+
+// ниже 780
+@mixin phone {
+  @media screen and (max-width: 779px) {
+    @content;
+  }
+}
+
+// =============================================================================
+// Mixin for fonts adaptive
+// =============================================================================
+
+@mixin font($fontFamily, $size, $lineHeight, $weight) {
+  font-family: $fontFamily, sans-serif;
+  font-size: $size;
+  line-height: $lineHeight;
+  font-weight: $weight;
+}
+
+@mixin fontAdaptive($size, $lineHeight, $weight: null) {
+  font-size: $size;
+  line-height: $lineHeight;
+  @if ($weight) {
+    font-weight: $weight;
+  }
+}
+
+// =============================================================================
+// Others
+// =============================================================================
+@mixin title {
+  @include font(var(--font-montserrat), 50px, 100%, 800);
+  color: var(--base-color);
+}
+
+@mixin title-h2 {
+  @include font(var(--font-montserrat), 36px, 140%, 800);
+  color: var(--base-color);
+}
+
+@mixin h-cards {
+  @include font(var(--font-montserrat), 20px, 140%, 800);
+}
+
+@mixin title-h4 {
+  @include font(var(--font-montserrat), 18px, 140%, 800);
+  color: var(--base-color);
+}
+
+@mixin btn {
+  @include font(var(--font-montserrat), 16px, 100%, 700);
+}
+
+@mixin btn-card {
+  @include font(var(--font-montserrat), 14px, 140%, 700);
+}
+
+@mixin text-breadcrumbs {
+  @include font(var(--font-montserrat), 16px, 100%, 400);
+  color: var(--lite-gray);
+}
+
+@mixin subtitle-h5 {
+  @include font(var(--font-roboto), 24px, 100%, 500);
+  color: var(--base-color);
+}
+
+@mixin nav-text {
+  @include font(var(--font-roboto), 16px, 100%, 700);
+  color: var(--text-color);
+}
+
+@mixin text {
+  @include font(var(--font-roboto), 18px, 100%, 400);
+  color: var(--text-color);
+}
+
+@mixin ts($duration: 0.5s) {
+  transition: all $duration ease-out;
+}

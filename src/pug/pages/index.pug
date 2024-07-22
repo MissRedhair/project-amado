@@ -1,0 +1,211 @@
+extends ~@templates/main-template
+include ~@mixins/card
+include ~@mixins/slider
+include ~@mixins/feedback
+include ~@mixins/sliderFeedback
+include ~@mixins/additionCard
+include ~@mixins/imgAddition
+
+
+block vars
+  - title = 'О бренде'
+
+block content
+  .container
+    section.start-screen
+      i(aria-hidden="true").background-figure1
+      i(aria-hidden="true").background-figure2
+      i(aria-hidden="true").background-image
+      .bread-crumbs
+        a.bread-crumbs__home.link(href="#"): svg.home-icon(width="17" height="18" viewBox="0 0 17 18"  xmlns="http://www.w3.org/2000/svg"): path(d="M1.3667 6.72001V16.98H5.9667V12.42C5.9667 9.00001 11.7167 9.00001 11.7167 12.42V16.98H16.3167V6.72001L8.65003 0.640015L1.3667 6.72001Z" stroke-linejoin="round")
+        a.bread-crumbs__text.link(href="#"): <span>/</span> Наши бренды 
+        p.bread-crumbs__text: <span>/</span> Кардиола 
+
+      .slider 
+        +slider('start-screen__slider')
+        .slider-start-screen-wrapper-nav
+          .slider-start-screen-nav
+            img(src="../images/items/arrowLeft.svg", alt="prev").swiper-start-screen-button-prev 
+            img(src="../images/items/arrowRight.svg", alt="next").swiper-start-screen-button-next
+          .slider-pagination-start-screen
+
+    section.advantages
+      .advantages-block 
+        .advantages-block__images 
+          img(src="images/advantages/advantage-1.svg", alt="advantage")
+          img(src="images/advantages/advantage-2.svg", alt="advantage")
+          img(src="images/advantages/advantage-3.svg", alt="advantage")
+          img(src="images/advantages/advantage-4.svg", alt="advantage")
+          img(src="images/advantages/advantage-5.svg", alt="advantage")
+          
+        .advantages-block__describtions 
+          p Стабилизирует ритм сердечной деятельности
+          p Нормализует артериальное давление
+          p Доступная цена
+          p Уникальный состав
+          p Эффективность для хорошего самочувствия и ежедневной активности
+
+    section.annotation
+      i(aria-hidden="true").annotation__background-line
+      h2.annotation__title Я хочу, чтобы мои близкие были здоровы
+      p.annotation__text За­боле­вания сер­дца час­то встре­ча­ют­ся сре­ди взрос­ло­го на­селе­ния. В пос­леднее вре­мя, по статис­ти­ке, воз­раст па­ци­ен­тов с сер­дечно-со­судис­ты­ми за­боле­вани­ями рез­ко по­моло­дел, по­это­му очень важ­но об­ра­щать вни­мание на не­кото­рые сим­пто­мы сер­дечных за­боле­ваний и сво­ев­ре­мен­но про­ходить ди­аг­ности­ку у кар­ди­оло­га. Здо­ровое сер­дце не­об­хо­димо для вы­соко­го ка­чес­тва жиз­ни. Это ор­ган, ко­торый не­ус­танно ра­бота­ет, ис­пы­тывая пос­то­ян­ную наг­рузку.
+      h3.annotation__subtitle Омега-3  не вырабатываются организмом, и их можно получить только вместе с пищей или специальными добавками.
+      i(aria-hidden="true").annotation__background-flower
+
+    include ~@components/products
+      i(aria-hidden="true").products__background-flower
+    
+    section.sostav 
+      .sostav__info
+        h2.sostav__info__title Что входит в состав Кардиола?
+        h3.sostav__info__subtitle Забота о сердце для активной жизни
+        p.sostav__info__text Кардиола и Омега 3 — это серия продуктов, призванная заботиться о ваше сердце и сосудах.  Кардиола – биологически активная добавка для здоровья сердца и активной жизни, в составе которой преобладают натуральные экстракты лекарственных растений и важные элементы, необходимые для заботы о сердце и сосудах.
+        p.sostav__info__text Кардиола и Омега 3 — это серия продуктов, призванная заботиться о ваше сердце и сосудах.  Кардиола – биологически активная добавка для здоровья сердца и активной жизни, в составе которой преобладают натуральные экстракты лекарственных растений и важные элементы, необходимые для заботы о сердце и сосудах.
+      i(aria-hidden="true").sostav__background-ellipse-light
+      i(aria-hidden="true").sostav__background-ellipse
+      i(aria-hidden="true").sostav__background-img 
+      .sostav__elements 
+        h3.sostav__elements__title  Основные элементы заботы:
+        .elements
+          +component('images/components/berries.png', 'Боярышник')
+          +component('images/components/radiola.png', 'Родиола розовая')
+          +component('images/components/biloba.png', 'Гинко Билоба')
+          +component('images/components/chaga.png', 'Чага')
+          +component('images/components/shipovnic.png', 'Шиповник')
+          +component('images/components/calina.png', 'Калина')
+          +component('images/components/curcuma.png', 'Куркума')
+          +component('images/components/vitaminC.png', 'Витамин С')
+          +component('images/components/lisin.png', 'Лизин')
+          +component('images/components/zink.png', 'Цинк')
+          +component('images/components/selen.png', 'Селен')
+          +component('images/components/omega3.png', 'Омега 3')
+        button.sostav__btn.btn Азбука здоровья 
+      i(aria-hidden="true").sostav__background-flower
+    
+    section.feedback
+      i(aria-hidden="true").feedback__background-img 
+      p.feedback__subtitle Ваши отзывы очень важны для нас
+      h2.feedback__title Отзывы о препарате Кардиола
+
+      .feedback__swiper
+        +sliderFeedback('swiper')
+    section.article 
+      p.article__subtitle Журнал
+      h2.article__title Узнай больше о сердце и сосудах
+      .article__grid-block 
+        .article__item-animate 
+          .article__item__img
+            img(src="images/articles/bg-article-animate.png", alt="").item-bg1
+            img(src="images/articles/img-article-animate.png", alt="").inner1
+          h3.article__item-animate__title: a(href="#").link Дела сердечные
+          p.quote — Первые поводы для беспокойства — появление загрудинных болей и одышки при физических нагрузках, — говорит Станислав Захаров, кардиолог, врач функциональной диагностики клиники «МедикСити».
+          a(href="#").article__item__link.link Подробнее 
+        .article__item.article__item_position1
+          .article__item__img
+            img(src="images/articles/bg-article1.png", alt="").item-bg2
+            img(src="images/articles/img-article1.png", alt="").inner2
+          h4.article__item__title: a(href="#").link Вершки и корешки
+          a(href="#").article__item__link.link Подробнее 
+        .article__item.article__item_position2
+          .article__item__img
+            img(src="images/articles/bg-article2.png", alt="").item-bg3
+            img(src="images/articles/img-article2.png", alt="").inner3
+          h4.article__item__title: a(href="#").link Пилатес — физкультура для всех
+          a(href="#").article__item__link.link Подробнее 
+        .article__item.article__item_position3
+          .article__item__img
+            img(src="images/articles/bg-article3.png", alt="").item-bg4
+            img(src="images/articles/img-article3.png", alt="").inner4
+          h4.article__item__title: a(href="#").link Аритмия: 9 важных вопросов о сердце
+          a(href="#").article__item__link.link Подробнее 
+        .article__item.article__item_position4
+          .article__item__img
+            img(src="images/articles/bg-article4.png", alt="").item-bg5
+            img(src="images/articles/img-article4.png", alt="").inner5
+          h4.article__item__title: a(href="#").link Идти или бежать?
+          a(href="#").article__item__link.link Подробнее 
+      button.article__btn.btn Перейти ко всем статьям
+    section.production
+      i(aria-hidden="true").production__background-img
+      .production-header
+        p.production-header__subtitle Наше производство
+        h2.production-header__title 7 ступеней контроля качества
+      .production-info
+        p.production-info__text Мы заботимся о безопасности своей продукции и здоровье потребителей, постоянно улучшая и обеспечивая контроль качества в течение всего жизненного цикла препаратов: от стадии разработки до этапа проверки выпускаемой продукции
+        button.production-info__btn.btn-empty Смотреть видео о производстве 
+    section.additions 
+      h2.additions__title С Кардиолой покупают
+      .additions__block 
+        .swiper-container-additions
+          .swiper-wrapper
+            +additionCard('Новинка', 'btn-new', 'addition1', 'Импловит', 'Витамин D3 2000 МЕ', 'Дополнительный источник витамина D3.' )
+              +imgAddition('images/additions/d3.png', 'images/additions/d3.png', 'images/additions/d3.png', 'images/additions/d3.png', 'images/additions/d3.png')
+            +additionCard('Акция', 'btn-sale', 'addition2', 'Бьютека «Beauteka»', 'Магний В6 + фолиевая кислота', 'Для нормального функционирования клеток, участвует в большинстве продолжение' )
+              +imgAddition('images/additions/mg.png', 'images/additions/mg.png', 'images/additions/mg.png', 'images/additions/mg.png', 'images/additions/mg.png')
+            +additionCard('Акция', 'btn-sale', 'addition3', 'Кардиола', 'Валериана комплекс', 'Валериана лекарственная обладает успокаивающим эффектом, регулируе продолжение' )
+              +imgAddition('images/additions/valeriana.png', 'images/additions/valeriana.png', 'images/additions/valeriana.png', 'images/additions/valeriana.png', 'images/additions/valeriana.png')
+            +additionCard('', '', 'addition4', 'Импловит', 'Витамин D3 2000 МЕ', 'Дополнительный источник витамина D3.' )
+              +imgAddition('images/additions/d3.png', 'images/additions/d3.png', 'images/additions/d3.png', 'images/additions/d3.png', 'images/additions/d3.png')
+            +additionCard('Акция', 'btn-sale', 'addition5', 'Бьютека «Beauteka»', 'Магний В6 + фолиевая кислота', 'Для нормального функционирования клеток, участвует в большинстве продолжение' )
+              +imgAddition('images/additions/mg.png', 'images/additions/mg.png', 'images/additions/mg.png', 'images/additions/mg.png', 'images/additions/mg.png')
+        .additions-swiper-btn
+          svg.swiper-addition-button-prev( width="13" height="25" viewBox="0 0 13 25" xmlns="http://www.w3.org/2000/svg"): path(fill-rule="evenodd" clip-rule="evenodd" d="M11.6191 0.318362C11.202 -0.106121 10.5257 -0.106121 10.1086 0.318362L0.938484 9.65074C-0.312831 10.9242 -0.312827 12.9889 0.938485 14.2623L11.1767 24.6816C11.5938 25.1061 12.2701 25.1061 12.6872 24.6816C13.1043 24.2572 13.1043 23.5689 12.6872 23.1444L2.44895 12.7251C2.03185 12.3006 2.03185 11.6124 2.44895 11.1879L11.6191 1.85555C12.0362 1.43107 12.0362 0.742845 11.6191 0.318362Z")
+          svg.swiper-addition-button-next( width="13" height="25" viewBox="0 0 13 25" xmlns="http://www.w3.org/2000/svg"): path(fill-rule="evenodd" clip-rule="evenodd" d="M1.38089 0.318362C1.798 -0.106121 2.47425 -0.106121 2.89136 0.318362L12.0615 9.65074C13.3128 10.9242 13.3128 12.9889 12.0615 14.2623L1.8233 24.6816C1.40619 25.1061 0.729933 25.1061 0.312828 24.6816C-0.104276 24.2572 -0.104276 23.5689 0.312828 23.1444L10.551 12.7251C10.9682 12.3006 10.9682 11.6124 10.551 11.1879L1.38089 1.85555C0.963786 1.43107 0.963786 0.742845 1.38089 0.318362Z")
+    section.map 
+      .map__header
+        p.map__header__subtitle Импловит в аптеках города
+        h2.map__header__title Где купить
+        .cities 
+          p.city Город: 
+          select#select_city(name="cities")
+            option(value="1") Москва
+            option(value="2") Санкт-Петербург
+            option(value="3") Казань
+      .map__content 
+        .map__search-block
+          .map__input-box.search-action 
+            span.search-icon: img(src="images/items/searchIcon.svg", alt="Лупа") 
+            input(type="text" placeholder="Введите адрес аптеки").input 
+            i(aria-hidden="true").close-icon
+          .map__address 
+            .map__address__item
+              p.address-city г. Москва, Открытое ш., д. 2 к.12
+              p.address-raion м.Бульвар Рокоссовского
+              p.address-phone +7 (495) 215-52-15
+              p.address-work-mode Пн-Пт: 08:00-22:00;  Сб-Вс: 09:00-21:00
+            .map__address__item
+              p.address-city г. Москва, Открытое ш., д. 2 к.12
+              p.address-raion м.Бульвар Рокоссовского
+              p.address-phone +7 (495) 215-52-15
+              p.address-work-mode Пн-Пт: 08:00-22:00;  Сб-Вс: 09:00-21:00
+            .map__address__item
+              p.address-city г. Москва, Открытое ш., д. 2 к.12
+              p.address-raion м.Бульвар Рокоссовского
+              p.address-phone +7 (495) 215-52-15
+              p.address-work-mode Пн-Пт: 08:00-22:00;  Сб-Вс: 09:00-21:00
+            .map__address__item
+              p.address-city г. Москва, Открытое ш., д. 2 к.12
+              p.address-raion м.Бульвар Рокоссовского
+              p.address-phone +7 (495) 215-52-15
+              p.address-work-mode Пн-Пт: 08:00-22:00;  Сб-Вс: 09:00-21:00
+
+          
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A678ffcdc04395b455bcd3938b8b63195f150b3e242f16c91a06c4f27b547500c&amp;width=764&amp;height=494&amp;lang=ru_RU&amp;scroll=true"></script>     
+    section.pharmacy
+      i(aria-hidden="true").pharmacy__background-img
+      .pharmacy-header
+        p.pharmacy-header__subtitle Где купить
+        h2.pharmacy-header__title Спрашивайте продукты Импловит в аптеках
+      .pharmacy__item 
+        img(src="images/pharmacy/pharmacy1.png", alt="Столички")
+        a(href="#").link stolichki.ru
+      .pharmacy__item 
+        img(src="images/pharmacy/pharmacy2.png", alt="Неофарм")
+        a(href="#").link neopharm.ru
+
+
+
+
+            
+
+

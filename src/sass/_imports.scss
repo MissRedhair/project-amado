@@ -1,0 +1,20 @@
+//components
+@import './components/header';
+@import './components/footer';
+@import './components/products';
+
+//mixins
+@import './mixins/card';
+@import './mixins/feedback';
+@import './mixins/component';
+@import './mixins/swiper-feedback';
+@import './mixins/additionCard';
+
+
+//pages
+@import './pages/404';
+@import './pages/index';
+@import './pages/ui';
+
+//templates
+@import './templates/main-template';

@@ -1,0 +1,94 @@
+@import './_libs';
+@import './_vars';
+@import './_mixins.scss';
+@import './_fonts';
+
+// common styles
+
+body {
+  background-color: #F6F6F6;
+  overflow-x: hidden;
+}
+
+
+//общие стили
+*{
+  margin: 0;
+  padding: 0;
+  // outline: 2px solid green !important;
+}
+
+//ссылка
+.link{
+  text-decoration: none;
+}
+
+//кнопка со сплошной заливкой
+.btn{
+  width: 350px;
+  height: 46px;
+  margin-top: 20px;
+  padding: 12px 0;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 50px;
+  @include btn;
+  text-align: center;
+  color: #fff;
+  @include ts(0.3s);
+
+  &:hover{
+    background: #F6F6F6;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+}
+
+//кнопка с бордером
+.btn-empty{
+  height: 50px;
+  border-radius: 50px;
+  background: none;
+  border: 1px solid var(--primary-color);
+  @include btn;
+  color: var(--primary-color);
+  @include ts;
+
+  &:hover{
+    background: var(--primary-color);
+    color: #ffffff;
+  }
+}
+
+.container{
+  margin: 0 auto;
+}
+// end common styles
+
+@import './_imports';
+
+
+// adaptive
+@include desktop {
+  .container{
+    width: 1280px;
+  }
+}
+@include laptop {
+  .container{
+    width: 1160px;
+  }
+}
+
+@include tablet {
+  .container{
+    width: 964px;
+  }
+}
+
+@include phone {
+  .container{
+    width: 720px;
+  }
+}

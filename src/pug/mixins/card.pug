@@ -1,0 +1,12 @@
+mixin card(className, src, title, subtitle, text)
+  .card(class=className)
+    .card__info 
+      h1.card__title=title 
+      h5.card__subtitle=subtitle
+      p.card__text=text
+
+        .card__action 
+          button.card__action__btn.btn Подробнее
+          a(href="#").card__action__link.link Отзывы (15)
+    .card__image 
+      img(src=src)
