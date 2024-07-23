@@ -96,13 +96,43 @@
 // =============================================================================
 // Others
 // =============================================================================
-@mixin title {
-  @include font(var(--font-montserrat), 50px, 100%, 800);
+@mixin h1_1920 {
+  @include font(var(--font-montserrat), 50px, 120%, 800);
   color: var(--base-color);
 }
 
-@mixin title-h2 {
+@mixin h2_1920 {
   @include font(var(--font-montserrat), 36px, 140%, 800);
+  color: var(--base-color);
+}
+
+@mixin h3_1920 {
+  @include font(var(--font-montserrat), 22px, 140%, 800);
+  color: var(--base-color);
+}
+
+@mixin h4_1920 {
+  @include font(var(--font-montserrat), 18px, 140%, 800);
+  color: var(--base-color);
+}
+
+@mixin links_1920 {
+  @include font(var(--font-montserrat), 16px, 140%, 700);
+  color: var(--base-color);
+}
+
+@mixin subtitle {
+  @include font(var(--font-montserrat), 16px, 140%, 400);
+  color: var(--base-color);
+}
+
+@mixin subtitle2 {
+  @include font(var(--font-roboto), 24px, 140%, 500);
+  color: var(--base-color);
+}
+
+@mixin maintext_1920 {
+  @include font(var(--font-roboto), 18px, 26px, 400);
   color: var(--base-color);
 }
 
@@ -110,38 +140,84 @@
   @include font(var(--font-montserrat), 20px, 140%, 800);
 }
 
-@mixin title-h4 {
-  @include font(var(--font-montserrat), 18px, 140%, 800);
+@mixin text_cards {
+  @include font(var(--font-roboto), 16px, 140%, 400);
   color: var(--base-color);
 }
 
-@mixin btn {
-  @include font(var(--font-montserrat), 16px, 100%, 700);
+@mixin links_menu {
+  @include font(var(--font-roboto), 16px, auto, 400);
+  color: var(--base-color);
 }
-
-@mixin btn-card {
-  @include font(var(--font-montserrat), 14px, 140%, 700);
-}
-
-@mixin text-breadcrumbs {
-  @include font(var(--font-montserrat), 16px, 100%, 400);
-  color: var(--lite-gray);
-}
-
-@mixin subtitle-h5 {
-  @include font(var(--font-roboto), 24px, 100%, 500);
+@mixin address {
+  @include font(var(--font-montserrat), 16px, 140%, 700);
   color: var(--base-color);
 }
 
-@mixin nav-text {
-  @include font(var(--font-roboto), 16px, 100%, 700);
-  color: var(--text-color);
+@mixin advantages {
+  @include font(var(--font-roboto), 18px, auto, 400);
+  color: var(--base-color);
 }
 
-@mixin text {
-  @include font(var(--font-roboto), 18px, 100%, 400);
-  color: var(--text-color);
+
+@mixin h1_1280 {
+  @include font(var(--font-montserrat), 40px, 120%, 800);
+  color: var(--base-color);
 }
+
+@mixin h1_360 {
+  @include font(var(--font-montserrat), 26px, 120%, 800);
+  color: var(--base-color);
+}
+
+@mixin h2_360 {
+  @include font(var(--font-montserrat), 24px, 140%, 800);
+  color: var(--base-color);
+}
+
+@mixin h3_360 {
+  @include font(var(--font-montserrat), 20px, 140%, 800);
+  color: var(--base-color);
+}
+
+@mixin subtitle_360 {
+  @include font(var(--font-roboto), 20px, 140%, 500);
+  color: var(--base-color);
+}
+
+
+// @mixin title-h4 {
+//   @include font(var(--font-montserrat), 18px, 140%, 800);
+//   color: var(--base-color);
+// }
+
+// @mixin btn {
+//   @include font(var(--font-montserrat), 16px, 100%, 700);
+// }
+
+// @mixin btn-card {
+//   @include font(var(--font-montserrat), 14px, 140%, 700);
+// }
+
+// @mixin text-breadcrumbs {
+//   @include font(var(--font-montserrat), 16px, 100%, 400);
+//   color: var(--lite-gray);
+// }
+
+// @mixin subtitle-h5 {
+//   @include font(var(--font-roboto), 24px, 100%, 500);
+//   color: var(--base-color);
+// }
+
+// @mixin nav-text {
+//   @include font(var(--font-roboto), 16px, 100%, 700);
+//   color: var(--text-color);
+// }
+
+// @mixin text {
+//   @include font(var(--font-roboto), 18px, 100%, 400);
+//   color: var(--text-color);
+// }
 
 @mixin ts($duration: 0.5s) {
   transition: all $duration ease-out;

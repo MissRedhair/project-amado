@@ -4,14 +4,23 @@
   // =============================================================================
 
   --base-color: #333333;
-  --primary-color: #46C0C1;
   --text-color: #4F4F4F;
-  --text-lite-color: #828282;
-  --lite-gray: #BDBDBD;
-  --pink: #F4ACBA;
-  --purple: #DEA1D2;
+  --dark-gray: #828282;
+  --gray: #BDBDBD;
+  --lite-gray: #E0E0E0;
+  --white-color: #FFFFFF;
+ 
+  --primary-color: #46C0C1;
   --mint: #97E0C5;
   --cold-mint: #A0DCE4;
+  --coral: #F4ACBA;
+  --purple: #DEA1D2;
+  --yellow: #FFECB9;
+  --blue: #71C9D4;
+  --light-blue: #8DD6E0;
+  --orange: #FF5D00;
+
+  --black: #000000;
 
 
   // =============================================================================
@@ -19,6 +28,7 @@
   // =============================================================================
 
   --shadow-banner: linear-gradient(0deg, var(--color-fade) 0%, rgba(232, 232, 232, 0.00) 49.28%);
+  --shadow-card: box-shadow(0 0 15% 0 rgba(0, 0, 0, 0.2));
 
   // =============================================================================
   // Filter
