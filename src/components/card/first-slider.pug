@@ -1,0 +1,16 @@
+include ../../components/button/button
+
+mixin first-slider(className, src, title, subtitle, text)
+  .first-slider(class=className)
+    .first-slider__info 
+      h1.first-slider__title=title 
+      h5.first-slider__subtitle=subtitle
+      p.first-slider__text=text
+
+        .first-slider__action 
+          +button('btn_primary', 'first-slider__btn_position', 'Подробнее')
+          a(href="#").first-slider__link.link Отзывы (15)
+    .first-slider__image 
+      img(src=src)
+
+

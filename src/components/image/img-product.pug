@@ -1,0 +1,4 @@
+mixin img-product(alt, ...images)
+  each image in images
+    .swiper-slide
+      img(src=image, alt=alt).slider__image

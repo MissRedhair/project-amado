@@ -1,0 +1,17 @@
+include ../../components/button/button
+
+mixin addition-сard(btn, className, classSwiper, subtitle, title, text, src )
+  .addition.swiper-slide 
+    .addition__btn(class=className): p=btn 
+      .swiper-container-addition(class=classSwiper) 
+        .swiper-wrapper
+          block
+
+          include ../../components/image/img-addition
+        .swiper-pagination-addition
+    
+    .addition__content
+      p.addition__subtitle=subtitle 
+      h3.addition__title=title
+      p.addition__text=text
+    +button('btn_secondary', 'addition__btn_position', 'Подробнее')
